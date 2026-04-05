@@ -9,15 +9,16 @@
 ---
 
 ## 👨‍💻 Sobre Mí
-- 🎓 Estudiante de **Licenciatura en Sistemas**.
-- 💡 Interesado en el desarrollo de software escalable y la arquitectura de sistemas.
-- 🛠️ Programador autodidacta con enfoque en tecnologías modernas.
+- 🎓 Estudiante de **2do año de Licenciatura en Sistemas** (19 años).
+- 🏛️ Formación académica sólida en **C++** (1er año aprobado en tiempo y forma).
+- 🚀 Enfocado en investigar y desarrollar soluciones web para **comercios, empresas y emprendimientos**.
+- 🔍 Actualmente profundizando en los lenguajes fundamentales que permiten "ser" a la web (HTML, CSS, JS/TS).
 
 ## 🛠️ Stack Tecnológico
-- **Frontend:** React 19 + TypeScript + Tailwind CSS 4.
-- **Animaciones:** Motion (framer-motion).
-- **Backend:** Firebase (Firestore para base de datos en tiempo real).
-- **Herramientas:** Vite, Git, Lucide Icons.
+- **Core Académico:** C++ (Avanzado), Algoritmos, Estructuras de Datos.
+- **En Aprendizaje (Web):** HTML5, CSS3, JavaScript, TypeScript.
+- **Explorando:** React, Tailwind CSS, Firebase.
+- **Herramientas:** Git, GitHub, Vite.
 
 ## ✨ Funcionalidades Destacadas
 - **Minijuego "Debug Time":** Un desafío interactivo para eliminar bugs.

@@ -43,9 +43,9 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Proyectos Destacados</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Proyectos & Soluciones</h2>
             <p className="text-slate-400 max-w-xl">
-              Una selección de mis desarrollos más recientes, combinando lo aprendido en la facultad con mi formación autodidacta.
+              Mi objetivo es transformar ideas en realidades digitales para comercios y emprendimientos, aplicando el rigor académico de la facultad al mundo web.
             </p>
           </div>
           <a href="#" className="text-blue-400 hover:text-blue-300 font-medium flex items-center gap-2 transition-colors">

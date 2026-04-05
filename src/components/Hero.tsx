@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Estudiante de <span className="text-slate-200 font-semibold">Licenciatura en Sistemas</span> y programador autodidacta apasionado por construir soluciones digitales modernas y eficientes.
+          Tengo <span className="text-slate-200 font-semibold">19 años</span> y estoy cursando el <span className="text-slate-200 font-semibold">2do año de Licenciatura en Sistemas</span>. Con una base sólida en <span className="text-blue-400 font-mono">C++</span> desde la facultad, hoy exploro el mundo del desarrollo web para impulsar negocios y emprendimientos.
         </motion.p>
 
         <motion.div

@@ -4,24 +4,24 @@ import { Code2, Cpu, Globe2, Layers, Smartphone, Terminal } from 'lucide-react';
 
 const skillGroups = [
   {
-    title: "Frontend",
-    icon: Globe2,
-    skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"]
-  },
-  {
-    title: "Backend",
+    title: "Facultad (Sólido)",
     icon: Terminal,
-    skills: ["Node.js", "Express", "Python", "Java"]
+    skills: ["C++ (Avanzado)", "Algoritmos", "Estructuras de Datos", "POO"]
   },
   {
-    title: "Herramientas",
-    icon: Cpu,
-    skills: ["Git", "Docker", "Linux", "VS Code"]
+    title: "Aprendizaje Web",
+    icon: Globe2,
+    skills: ["HTML5 (En curso)", "CSS3 (En curso)", "JavaScript (En curso)", "TypeScript (En curso)"]
   },
   {
-    title: "Facultad",
+    title: "Explorando",
     icon: Layers,
-    skills: ["Algoritmos", "Estructura de Datos", "Bases de Datos", "Arquitectura"]
+    skills: ["React", "Tailwind CSS", "Firebase", "Motion"]
+  },
+  {
+    title: "Objetivo",
+    icon: Cpu,
+    skills: ["Web para Comercios", "Soluciones Digitales", "UI/UX Moderno", "Emprendimientos"]
   }
 ];
 
