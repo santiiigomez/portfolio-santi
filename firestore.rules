@@ -1,0 +1,88 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: messages
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required, < 100 chars)
+    //   - email: string (required, valid email format)
+    //   - message: string (required, < 5000 chars)
+    //   - createdAt: timestamp (required)
+    //
+    // Collection: scores
+    // Document ID: auto-generated
+    // Fields:
+    //   - playerName: string (required, < 50 chars)
+    //   - score: number (required, positive)
+    //   - createdAt: timestamp (required)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+         (request.auth.token.email == "sg8436064@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    function isValidEmail(email) {
+      return email is string &&
+        email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidMessage(data) {
+      return data.keys().hasAll(['name', 'email', 'message', 'createdAt']) &&
+             data.name is string && data.name.size() > 0 && data.name.size() < 100 &&
+             isValidEmail(data.email) &&
+             data.message is string && data.message.size() > 0 && data.message.size() < 5000 &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidScore(data) {
+      return data.keys().hasAll(['playerName', 'score', 'createdAt']) &&
+             data.playerName is string && data.playerName.size() > 0 && data.playerName.size() < 50 &&
+             data.score is number && data.score >= 0 &&
+             data.createdAt is timestamp;
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    // Messages: Anyone can create, only admin can read
+    match /messages/{messageId} {
+      allow create: if isValidMessage(request.resource.data);
+      allow read: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Scores: Anyone can create and read, only admin can delete
+    match /scores/{scoreId} {
+      allow create: if isValidScore(request.resource.data);
+      allow read: if true; // High scores are public
+      allow update, delete: if isAdmin();
+    }
+
+    // Users: Only the user can read/write their own profile, admin can do anything
+    match /users/{userId} {
+      allow read, write: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
