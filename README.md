@@ -3,7 +3,7 @@
 ¡Hola! Soy Santiago, estudiante de **Licenciatura en Sistemas** y desarrollador entusiasta. Este repositorio contiene el código de mi landing page personal, diseñada para mostrar mis proyectos y habilidades técnicas.
 
 ## 🔗 Demo en Vivo
-### [👉 EXPLORAR MI WEB AQUÍ](https://quien-soy-weld.vercel.app)
+### [👉 EXPLORAR MI WEB AQUÍ](https://portfolio-santi.vercel.app)
 *(Desplegado en Vercel)*
 
 ---
@@ -39,4 +39,4 @@
 
 ---
 
-Hecho con ❤️ por [Santiago Gomez](https://github.com/santiiigomez)
+Hecho con ❤️ por [Santiago Gomez](https://github.com/santiiigomez) | [Repo: portfolio-santi](https://github.com/santiiigomez/portfolio-santi)
