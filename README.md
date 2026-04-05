@@ -3,8 +3,8 @@
 ¡Hola! Soy Santiago, estudiante de **Licenciatura en Sistemas** y desarrollador entusiasta. Este repositorio contiene el código de mi landing page personal, diseñada para mostrar mis proyectos y habilidades técnicas.
 
 ## 🔗 Demo en Vivo
-### [👉 EXPLORAR MI WEB AQUÍ](https://ais-pre-2k63lmtxoz63jzxpvqpa7f-357276123073.us-east1.run.app)
-*(Nota: Si ya hiciste el Deploy en AI Studio, cambia este link por tu URL de Cloud Run)*
+### [👉 EXPLORAR MI WEB AQUÍ](https://quien-soy-weld.vercel.app)
+*(Desplegado en Vercel)*
 
 ---
 
